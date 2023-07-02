@@ -1,0 +1,157 @@
+:root {
+    --primary-dark: hsl(257, 40%, 49%);
+    --primary-light: hsl(300, 69%, 71%);
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--primary-dark);
+    background-image: url("../images/bg-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 65px 80px 40px;
+}
+
+.container nav {
+    align-self: flex-start;
+}
+
+.container nav img {
+    width: 200px;
+}
+
+.container main {
+    align-self: center;
+    display: flex;
+}
+
+.container main img {
+    max-width: 100%;
+}
+
+.container main .information {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 60px 0 0 60px;
+}
+
+.container main .information h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+}
+
+.container main .information p {
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    margin: 25px 0;
+}
+
+.container main .information a.button {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-dark);
+    width: 200px;
+    height: 56px;
+    border-radius: 28px;
+    line-height: 27px;
+    font-weight: 400;
+    font-size: 18px;
+    box-shadow: 2px 4px 9px 3px rgba(0, 0, 0, 0.26);
+    transition: 0.3s ease-in-out;
+}
+
+.container main .information a.button:hover {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+.container footer {
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container footer a:nth-child(2) {
+    margin: 0 16px;
+}
+
+.container footer a {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.container footer a:hover {
+    color: var(--primary-light);
+    cursor: pointer;
+    border: 1px solid var(--primary-light);
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 40px;
+        justify-content: space-between;
+    }
+
+    .container nav img {
+        width: 120px;
+    }
+
+    .container main {
+        flex-direction: column;
+        margin-top: 60px;
+    }
+
+    .container main .information {
+        margin: 60px 0;
+        align-items: center;
+    }
+
+    .container main .information h1 {
+        font-size: 24px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .container main .information p {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: center;
+    }
+
+    .container footer {
+        align-self: center;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url("../images/bg-mobile.svg");
+    }
+}
